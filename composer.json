@@ -1,0 +1,28 @@
+{
+    "name": "stgalkin/ringcentral-webhooks",
+    "description": "Simple wrapper for https://ringcentral.com/ using webhooks",
+    "license": "MIT",
+    "keywords":["Glip", "RingCentral", "Webhook", "PHP", "php", "glip"],
+    "authors": [
+        {
+            "name": "svisvisvi",
+            "email": "stgalkin.stgalkin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/stgalkin/ringcentral-webhooks",
+    "require": {
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stgalkin\\RingCentral\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
