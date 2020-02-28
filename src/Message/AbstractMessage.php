@@ -17,7 +17,7 @@ abstract class AbstractMessage implements MessageContract
     /**
      * @var string
      */
-    private $body;
+    private $text;
 
     /**
      * @var array
@@ -28,12 +28,12 @@ abstract class AbstractMessage implements MessageContract
      * AbstractMessage constructor.
      *
      * @param string $title
-     * @param string $body
+     * @param string $text
      * @param array  $attachments
      */
-    public function __construct(string $title, string $body, array $attachments = [])
+    public function __construct(string $title, string $text, array $attachments = [])
     {
-        $this->setTitle($title)->setBody($body);
+        $this->setTitle($title)->setText($text);
 
         $this->attachments = $attachments;
     }
@@ -51,13 +51,13 @@ abstract class AbstractMessage implements MessageContract
     }
 
     /**
-     * @param string $body
+     * @param string $text
      *
      * @return AbstractMessage
      */
-    private function setBody(string $body): AbstractMessage
+    private function setText(string $text): AbstractMessage
     {
-        $this->body = $body;
+        $this->text = $text;
 
         return $this;
     }
@@ -77,13 +77,13 @@ abstract class AbstractMessage implements MessageContract
     /**
      * @return string
      */
-    protected function body(): string
+    protected function text(): string
     {
-        if (!is_string($this->body)) {
-            throw new \UnexpectedValueException("Body was not init properly");
+        if (!is_string($this->text)) {
+            throw new \UnexpectedValueException("Text was not init properly");
         }
 
-        return $this->body;
+        return $this->text;
     }
 
     /**
