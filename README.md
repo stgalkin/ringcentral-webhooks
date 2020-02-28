@@ -15,7 +15,7 @@ Create a Simple Message if you want to sent a message to your channel.
 
 ```php
 $adapter = new \Stgalkin\RingCentral\RingCentralAdapter(<WEBHOOK_URL>);
-$message  = new \Stgalkin\RingCentral\Message\SimpleMessage('Simple card title', 'Simple card text');
+$message  = new \Stgalkin\RingCentral\Message\SimpleMessage('Title', 'Message');
 $adapter->send($message);
 ```
 
