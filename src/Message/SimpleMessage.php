@@ -17,7 +17,7 @@ class SimpleMessage extends AbstractMessage
         // TODO process attachments ?
         return [
             "title" => $this->title(),
-            "text" => $this->text(),
+            "body" => $this->text(),
             "attachments" => $this->attachments
         ];
     }
