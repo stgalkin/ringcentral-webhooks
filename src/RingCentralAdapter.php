@@ -47,7 +47,8 @@ class RingCentralAdapter
         ]);
 
         $result = json_decode(curl_exec($ch), true);
-        if (array_key_exists('status', $result) && strtolower($result['status'] === 'ok')) {
+
+        if (array_key_exists('status', $result) && strtolower($result['status']) === 'ok') {
             return true;
         }
 
